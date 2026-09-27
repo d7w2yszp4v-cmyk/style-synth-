@@ -2,188 +2,115 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-
-    <meta
-        name="viewport"
-        content="width=device-width, initial-scale=1.0"
-    >
-
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Style Synth AI</title>
 
-    <link
-        rel="preconnect"
-        href="https://fonts.googleapis.com"
-    >
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-    <link
-        rel="preconnect"
-        href="https://fonts.gstatic.com"
-        crossorigin
-    >
-
-    <link
-        href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap"
-        rel="stylesheet"
-    >
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
 
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-<div class="app-shell">
+<div class="app">
 
-    <!-- =========================================
-         SIDEBAR
-    ========================================== -->
-
+    <!-- SIDEBAR -->
     <aside class="sidebar">
 
-        <div class="brand">
-            <div class="brand-mark">S</div>
+        <div class="logo">
+            <div class="logo-icon">S</div>
 
             <div>
-                <h1>Style Synth</h1>
-                <span>AI WARDROBE</span>
+                <strong>Style Synth</strong>
+                <small>AI WARDROBE</small>
             </div>
         </div>
 
+        <nav>
 
-        <nav class="navigation">
-
-            <button
-                class="nav-item active"
-                data-frame="homeFrame"
-            >
+            <button class="nav-btn active" data-screen="home">
                 <span>⌂</span>
-                <span>Home</span>
+                Home
             </button>
 
-
-            <button
-                class="nav-item"
-                data-frame="wardrobeFrame"
-            >
+            <button class="nav-btn" data-screen="wardrobe">
                 <span>◫</span>
-                <span>My Wardrobe</span>
+                My Wardrobe
             </button>
 
-
-            <button
-                class="nav-item"
-                data-frame="stylistFrame"
-            >
+            <button class="nav-btn" data-screen="stylist">
                 <span>✦</span>
-                <span>AI Stylist</span>
+                AI Stylist
             </button>
 
-
-            <button
-                class="nav-item"
-                data-frame="favoritesFrame"
-            >
+            <button class="nav-btn" data-screen="favorites">
                 <span>♡</span>
-                <span>Favorites</span>
+                Favorites
             </button>
 
-
-            <button
-                class="nav-item"
-                data-frame="profileFrame"
-            >
+            <button class="nav-btn" data-screen="profile">
                 <span>○</span>
-                <span>Profile</span>
+                Profile
             </button>
 
         </nav>
 
-
-        <div class="sidebar-bottom">
-
-            <p>STYLE SYNTH AI</p>
-            <small>Smart wardrobe • 2026</small>
-
+        <div class="sidebar-footer">
+            STYLE SYNTH AI<br>
+            <small>Your smart wardrobe</small>
         </div>
 
     </aside>
 
 
-    <!-- =========================================
-         MAIN
-    ========================================== -->
-
-    <main class="main-content">
-
-        <!-- =====================================
-             TOP BAR
-        ====================================== -->
+    <!-- MAIN -->
+    <main class="main">
 
         <header class="topbar">
 
             <div>
-                <span class="eyebrow">YOUR PERSONAL STYLIST</span>
-                <h2>Style your way.</h2>
+                <small class="eyebrow">YOUR PERSONAL AI STYLIST</small>
+                <h2 id="topTitle">Style your way.</h2>
             </div>
 
-
-            <button
-                id="notificationBtn"
-                class="icon-btn"
-                type="button"
-            >
+            <button id="notificationBtn" class="round-btn">
                 ♢
             </button>
 
         </header>
 
 
-        <!-- =====================================
-             HOME FRAME
-        ====================================== -->
+        <!-- ================= HOME ================= -->
 
-        <section
-            class="frame active"
-            id="homeFrame"
-        >
+        <section id="home" class="screen active">
 
-            <div class="hero-card">
+            <div class="hero">
 
-                <div class="hero-content">
+                <div class="hero-text">
 
-                    <span class="eyebrow">
-                        WELCOME TO STYLE SYNTH
-                    </span>
+                    <small class="eyebrow">WELCOME TO STYLE SYNTH</small>
 
                     <h1>
-                        Your wardrobe.
-                        <br>
+                        Your wardrobe.<br>
                         <span>Smarter.</span>
                     </h1>
 
                     <p>
-                        Organize your clothes, discover
-                        colour combinations and let your
-                        personal AI stylist create outfits
-                        from what you already own.
+                        Add your clothes, organize your wardrobe and
+                        let Style Synth create colour-matched outfits
+                        from the clothes you already own.
                     </p>
 
+                    <div class="hero-buttons">
 
-                    <div class="hero-actions">
-
-                        <button
-                            class="primary-btn"
-                            type="button"
-                            data-frame="stylistFrame"
-                        >
+                        <button class="primary" data-screen="stylist">
                             ✦ Create Outfit
                         </button>
 
-
-                        <button
-                            class="secondary-btn"
-                            type="button"
-                            data-frame="wardrobeFrame"
-                        >
+                        <button class="secondary" data-screen="wardrobe">
                             View Wardrobe
                         </button>
 
@@ -191,219 +118,152 @@
 
                 </div>
 
-
-                <div class="hero-visual">
-
-                    <div class="floating-card card-one">
-                        👕
-                    </div>
-
-                    <div class="floating-card card-two">
-                        👖
-                    </div>
-
-                    <div class="floating-card card-three">
-                        ✦
-                    </div>
-
+                <div class="hero-art">
+                    <div class="floating clothing one">👕</div>
+                    <div class="floating clothing two">👖</div>
+                    <div class="floating star">✦</div>
                 </div>
 
             </div>
 
 
-            <!-- STATS -->
+            <div class="stats">
 
-            <div class="stats-grid">
-
-                <div class="stat-card">
-
-                    <span>WARDROBE</span>
-
-                    <strong id="totalItems">0</strong>
-
-                    <small>items saved</small>
-
+                <div class="stat">
+                    <small>WARDROBE</small>
+                    <strong id="totalCount">0</strong>
+                    <span>items</span>
                 </div>
 
-
-                <div class="stat-card">
-
-                    <span>SHIRTS</span>
-
+                <div class="stat">
+                    <small>SHIRTS</small>
                     <strong id="shirtCount">0</strong>
-
-                    <small>tops</small>
-
+                    <span>tops</span>
                 </div>
 
-
-                <div class="stat-card">
-
-                    <span>PANTS</span>
-
+                <div class="stat">
+                    <small>PANTS</small>
                     <strong id="pantsCount">0</strong>
-
-                    <small>bottoms</small>
-
+                    <span>bottoms</span>
                 </div>
 
-
-                <div class="stat-card">
-
-                    <span>FAVORITES</span>
-
+                <div class="stat">
+                    <small>FAVORITES</small>
                     <strong id="favoriteCount">0</strong>
-
-                    <small>saved looks</small>
-
+                    <span>saved</span>
                 </div>
 
             </div>
 
 
-            <!-- RECENT -->
-
-            <div class="section-heading">
+            <div class="section-title">
 
                 <div>
-                    <span class="eyebrow">YOUR COLLECTION</span>
+                    <small class="eyebrow">YOUR COLLECTION</small>
                     <h2>Recently added</h2>
                 </div>
 
-                <button
-                    class="text-btn"
-                    type="button"
-                    data-frame="wardrobeFrame"
-                >
+                <button class="text-button" data-screen="wardrobe">
                     View all →
                 </button>
 
             </div>
 
-
-            <div
-                id="recentItems"
-                class="items-grid"
-            ></div>
+            <div id="recentGrid" class="clothing-grid"></div>
 
         </section>
 
 
-        <!-- =====================================
-             WARDROBE FRAME
-        ====================================== -->
+        <!-- ================= WARDROBE ================= -->
 
-        <section
-            class="frame"
-            id="wardrobeFrame"
-        >
+        <section id="wardrobe" class="screen">
 
-            <div class="page-heading">
+            <div class="page-title">
 
                 <div>
-                    <span class="eyebrow">COLLECTION</span>
+                    <small class="eyebrow">YOUR COLLECTION</small>
                     <h1>My Wardrobe</h1>
-                    <p>
-                        Everything you own, organized in one place.
-                    </p>
+                    <p>Everything you own in one place.</p>
                 </div>
 
-
-                <button
-                    class="primary-btn add-item-btn"
-                    data-category="shirt"
-                    type="button"
-                >
+                <button id="openAddBtn" class="primary">
                     + Add Clothing
                 </button>
 
             </div>
 
 
-            <div class="category-tabs">
+            <div class="tabs">
 
-                <button
-                    class="category-tab active"
-                    data-category="all"
-                    type="button"
-                >
+                <button class="tab active" data-filter="all">
                     All
                 </button>
 
-
-                <button
-                    class="category-tab"
-                    data-category="shirt"
-                    type="button"
-                >
+                <button class="tab" data-filter="shirt">
                     Shirts
                 </button>
 
-
-                <button
-                    class="category-tab"
-                    data-category="pant"
-                    type="button"
-                >
+                <button class="tab" data-filter="pant">
                     Pants
                 </button>
 
-
-                <button
-                    class="category-tab"
-                    data-category="accessory"
-                    type="button"
-                >
+                <button class="tab" data-filter="accessory">
                     Accessories
                 </button>
 
             </div>
 
 
-            <div
-                id="wardrobeGrid"
-                class="items-grid"
-            ></div>
+            <div id="wardrobeGrid" class="clothing-grid"></div>
 
         </section>
 
 
-        <!-- =====================================
-             ADD CLOTHING FRAME
-        ====================================== -->
+        <!-- ================= ADD CLOTHING ================= -->
 
-        <section
-            class="frame"
-            id="uploadFrame"
-        >
+        <section id="add" class="screen">
 
-            <div class="page-heading">
+            <div class="page-title">
 
                 <div>
-                    <span class="eyebrow">NEW ITEM</span>
+                    <small class="eyebrow">NEW ITEM</small>
                     <h1>Add Clothing</h1>
-                    <p>
-                        Add an item to your digital wardrobe.
-                    </p>
+                    <p>Add a piece to your digital wardrobe.</p>
                 </div>
+
+                <button class="secondary" data-screen="wardrobe">
+                    ← Back
+                </button>
 
             </div>
 
 
-            <div class="upload-layout">
+            <div class="add-layout">
 
-                <!-- IMAGE -->
+                <div class="upload-box">
 
-                <div class="upload-card">
+                    <div id="previewArea" class="preview-area">
 
-                    <div
-                        id="uploadPreview"
-                        class="upload-preview"
-                    ></div>
+                        <div class="upload-placeholder">
 
+                            <div class="upload-icon">＋</div>
+
+                            <h3>Upload clothing photo</h3>
+
+                            <p>
+                                Add a clear photo of your clothing.
+                            </p>
+
+                            <button id="choosePhotoBtn" class="primary">
+                                Choose Photo
+                            </button>
+
+                        </div>
+
+                    </div>
 
                     <input
-                        id="imageInput"
+                        id="photoInput"
                         type="file"
                         accept="image/*"
                         hidden
@@ -412,133 +272,69 @@
                 </div>
 
 
-                <!-- FORM -->
+                <div class="form-box">
 
-                <div class="form-card">
+                    <h2>Clothing details</h2>
 
-                    <div class="form-group">
+                    <label>Category</label>
 
-                        <label>Category</label>
+                    <div class="category-buttons">
 
-                        <div class="upload-category-row">
+                        <button class="category-btn active" data-category="shirt">
+                            👕 Shirt
+                        </button>
 
-                            <button
-                                type="button"
-                                class="upload-category active"
-                                data-category="shirt"
-                            >
-                                👕 Shirt
-                            </button>
+                        <button class="category-btn" data-category="pant">
+                            👖 Pants
+                        </button>
 
-
-                            <button
-                                type="button"
-                                class="upload-category"
-                                data-category="pant"
-                            >
-                                👖 Pants
-                            </button>
-
-
-                            <button
-                                type="button"
-                                class="upload-category"
-                                data-category="accessory"
-                            >
-                                🕶️ Accessory
-                            </button>
-
-                        </div>
+                        <button class="category-btn" data-category="accessory">
+                            🕶️ Accessory
+                        </button>
 
                     </div>
 
+
+                    <label for="clothingName">Name</label>
 
                     <input
-                        id="itemCategory"
-                        type="hidden"
-                        value="shirt"
+                        id="clothingName"
+                        type="text"
+                        placeholder="Example: Navy Oversized Shirt"
                     >
 
 
-                    <div class="form-group">
+                    <label for="clothingColor">Colour</label>
 
-                        <label for="itemName">
-                            Clothing Name
-                        </label>
-
-                        <input
-                            id="itemName"
-                            type="text"
-                            placeholder="Example: Oversized Blue Shirt"
-                        >
-
-                    </div>
-
-
-                    <div class="form-group">
-
-                        <label for="itemColor">
-                            Colour
-                        </label>
-
-                        <input
-                            id="itemColor"
-                            type="text"
-                            placeholder="Example: Navy Blue"
-                        >
-
-                    </div>
-
-
-                    <div class="form-group">
-
-                        <label for="itemBrand">
-                            Brand
-                        </label>
-
-                        <input
-                            id="itemBrand"
-                            type="text"
-                            placeholder="Example: Zara"
-                        >
-
-                    </div>
-
-
-                    <div class="form-group">
-
-                        <label for="itemOccasion">
-                            Occasion
-                        </label>
-
-                        <select id="itemOccasion">
-
-                            <option value="College">
-                                College
-                            </option>
-
-                            <option value="Casual">
-                                Casual
-                            </option>
-
-                            <option value="Formal">
-                                Formal
-                            </option>
-
-                            <option value="Party">
-                                Party
-                            </option>
-
-                        </select>
-
-                    </div>
-
-
-                    <button
-                        id="saveItemBtn"
-                        class="primary-btn full-btn"
-                        type="button"
+                    <input
+                        id="clothingColor"
+                        type="text"
+                        placeholder="Example: Navy Blue"
                     >
+
+
+                    <label for="clothingBrand">Brand</label>
+
+                    <input
+                        id="clothingBrand"
+                        type="text"
+                        placeholder="Example: Zara"
+                    >
+
+
+                    <label for="clothingOccasion">Occasion</label>
+
+                    <select id="clothingOccasion">
+
+                        <option>College</option>
+                        <option>Casual</option>
+                        <option>Formal</option>
+                        <option>Party</option>
+
+                    </select>
+
+
+                    <button id="saveClothingBtn" class="primary full">
                         Save to Wardrobe
                     </button>
 
@@ -549,28 +345,19 @@
         </section>
 
 
-        <!-- =====================================
-             AI STYLIST FRAME
-        ====================================== -->
+        <!-- ================= AI STYLIST ================= -->
 
-        <section
-            class="frame"
-            id="stylistFrame"
-        >
+        <section id="stylist" class="screen">
 
-            <div class="page-heading">
+            <div class="page-title">
 
                 <div>
-                    <span class="eyebrow">AI POWERED STYLING</span>
-
+                    <small class="eyebrow">SMART STYLING</small>
                     <h1>AI Stylist</h1>
-
                     <p>
-                        Choose an occasion and let Style Synth
-                        create a colour-matched outfit from
-                        your wardrobe.
+                        Choose an occasion and create an outfit
+                        from your wardrobe.
                     </p>
-
                 </div>
 
             </div>
@@ -578,65 +365,37 @@
 
             <div class="stylist-card">
 
-                <div class="stylist-intro">
+                <div class="ai-icon">✦</div>
 
-                    <div class="ai-symbol">
-                        ✦
-                    </div>
+                <h2>What are you dressing for?</h2>
 
-                    <h2>
-                        What are you dressing for?
-                    </h2>
-
-                    <p>
-                        Our smart styling engine checks your
-                        wardrobe colours, occasion and available
-                        clothing combinations.
-                    </p>
-
-                </div>
+                <p>
+                    Style Synth checks your available clothes and
+                    colour compatibility before selecting a look.
+                </p>
 
 
                 <div class="occasion-grid">
 
-                    <button
-                        type="button"
-                        class="occasion-option active"
-                        data-occasion="College"
-                    >
+                    <button class="occasion active" data-occasion="College">
                         <span>🎓</span>
                         <strong>College</strong>
                         <small>Clean & comfortable</small>
                     </button>
 
-
-                    <button
-                        type="button"
-                        class="occasion-option"
-                        data-occasion="Casual"
-                    >
+                    <button class="occasion" data-occasion="Casual">
                         <span>☀️</span>
                         <strong>Casual</strong>
-                        <small>Relaxed everyday</small>
+                        <small>Everyday style</small>
                     </button>
 
-
-                    <button
-                        type="button"
-                        class="occasion-option"
-                        data-occasion="Formal"
-                    >
+                    <button class="occasion" data-occasion="Formal">
                         <span>◈</span>
                         <strong>Formal</strong>
                         <small>Sharp & polished</small>
                     </button>
 
-
-                    <button
-                        type="button"
-                        class="occasion-option"
-                        data-occasion="Party"
-                    >
+                    <button class="occasion" data-occasion="Party">
                         <span>✦</span>
                         <strong>Party</strong>
                         <small>Stand out</small>
@@ -645,25 +404,20 @@
                 </div>
 
 
-                <div class="stylist-info-box">
+                <div class="colour-info">
 
                     <strong>🎨 Smart Colour Matching</strong>
 
                     <p>
-                        Style Synth compares colours such as
-                        navy + white, black + beige,
-                        blue + cream and many more combinations
-                        before choosing your outfit.
+                        The stylist checks combinations such as
+                        navy + white, black + beige, blue + cream,
+                        grey + black and many other combinations.
                     </p>
 
                 </div>
 
 
-                <button
-                    id="generateOutfitBtn"
-                    class="primary-btn large-btn"
-                    type="button"
-                >
+                <button id="generateBtn" class="primary generate">
                     ✦ Generate My Outfit
                 </button>
 
@@ -672,61 +426,38 @@
         </section>
 
 
-        <!-- =====================================
-             OUTFIT RESULT FRAME
-        ====================================== -->
+        <!-- ================= RESULT ================= -->
 
-        <section
-            class="frame"
-            id="outfitFrame"
-        >
+        <section id="result" class="screen">
 
-            <div class="page-heading">
+            <div class="page-title">
 
                 <div>
-                    <span class="eyebrow">STYLE SYNTH AI</span>
+                    <small class="eyebrow">STYLE SYNTH AI</small>
                     <h1>Your Outfit</h1>
-                    <p>
-                        A combination created from your wardrobe.
-                    </p>
+                    <p>Your wardrobe combination.</p>
                 </div>
 
-
-                <button
-                    class="secondary-btn"
-                    type="button"
-                    data-frame="stylistFrame"
-                >
-                    ← Back to Stylist
+                <button class="secondary" data-screen="stylist">
+                    ← Back
                 </button>
 
             </div>
 
 
-            <div
-                id="outfitResult"
-                class="outfit-result"
-            >
+            <div id="resultArea" class="result-area">
 
                 <div class="empty-state">
 
-                    <div class="empty-icon">
-                        ✦
-                    </div>
+                    <div class="empty-icon">✦</div>
 
-                    <h3>
-                        Your outfit will appear here
-                    </h3>
+                    <h2>No outfit yet</h2>
 
                     <p>
-                        Go to AI Stylist and generate your first look.
+                        Generate an outfit from AI Stylist.
                     </p>
 
-                    <button
-                        class="primary-btn"
-                        type="button"
-                        data-frame="stylistFrame"
-                    >
+                    <button class="primary" data-screen="stylist">
                         Open AI Stylist
                     </button>
 
@@ -737,87 +468,46 @@
         </section>
 
 
-        <!-- =====================================
-             FAVORITES FRAME
-        ====================================== -->
+        <!-- ================= FAVORITES ================= -->
 
-        <section
-            class="frame"
-            id="favoritesFrame"
-        >
+        <section id="favorites" class="screen">
 
-            <div class="page-heading">
+            <div class="page-title">
 
                 <div>
-                    <span class="eyebrow">SAVED STYLE</span>
+                    <small class="eyebrow">SAVED STYLE</small>
                     <h1>Favorites</h1>
-                    <p>
-                        Your favourite wardrobe pieces.
-                    </p>
+                    <p>Your favorite clothing pieces.</p>
                 </div>
 
             </div>
 
-
-            <div
-                id="favoritesGrid"
-                class="items-grid"
-            ></div>
+            <div id="favoritesGrid" class="clothing-grid"></div>
 
         </section>
 
 
-        <!-- =====================================
-             PROFILE FRAME
-        ====================================== -->
+        <!-- ================= PROFILE ================= -->
 
-        <section
-            class="frame"
-            id="profileFrame"
-        >
+        <section id="profile" class="screen">
 
-            <div class="page-heading">
+            <div class="page-title">
 
                 <div>
-                    <span class="eyebrow">YOUR ACCOUNT</span>
+                    <small class="eyebrow">YOUR ACCOUNT</small>
                     <h1>Profile</h1>
-                    <p>
-                        Your Style Synth wardrobe profile.
-                    </p>
+                    <p>Your Style Synth profile.</p>
                 </div>
 
             </div>
-
 
             <div class="profile-card">
 
-                <div class="profile-avatar">
-                    S
-                </div>
+                <div class="avatar">S</div>
 
                 <div>
-
                     <h2>Style Explorer</h2>
-
-                    <p>
-                        Building a smarter wardrobe with AI.
-                    </p>
-
-                </div>
-
-            </div>
-
-
-            <div class="profile-stats">
-
-                <div>
-                    <strong id="profileTotal">
-                        Your wardrobe
-                    </strong>
-
-                    <span>
-                        items saved locally
-                    </span>
+                    <p>Building a smarter wardrobe with AI.</p>
                 </div>
 
             </div>
@@ -829,19 +519,9 @@
 </div>
 
 
-<!-- =========================================
-     TOAST
-========================================== -->
+<!-- TOAST -->
+<div id="toast" class="toast"></div>
 
-<div
-    id="toast"
-    class="toast"
-></div>
-
-
-<!-- =========================================
-     JAVASCRIPT
-========================================== -->
 
 <script src="script.js"></script>
 
