@@ -545,6 +545,7 @@ function attachCardActions() {
 // ======================================================
 
 function toggleFavorite(id) {
+    showToast("LIKE BUTTON CLICKED");
   const item = wardrobe.find(
     item => String(item.id) === String(id)
   );
