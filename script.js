@@ -545,19 +545,23 @@ function attachCardActions() {
 // ======================================================
 
 function toggleFavorite(id) {
-    showToast("LIKE BUTTON CLICKED");
   const item = wardrobe.find(
     item => String(item.id) === String(id)
   );
 
   if (!item) return;
 
-  item.favorite = !Boolean(item.favorite);
+  // Toggle favorite
+  item.favorite = item.favorite !== true;
 
+  // Save immediately
   saveWardrobe();
+
+  // Update the page
   renderEverything();
 
-  if (item.favorite) {
+  // Message
+  if (item.favorite === true) {
     showToast("❤️ Added to Liked");
   } else {
     showToast("💔 Removed from Liked");
