@@ -431,13 +431,12 @@ function createCard(item) {
 
 
                 <button
-                    class="favorite ${item.favorite ? "active" : ""}"
-                    data-action="favorite"
-                    data-id="${item.id}"
-                    type="button"
-                >
-                    ${item.favorite ? "♥" : "♡"}
-                </button>
+    class="favorite ${item.favorite ? "active" : ""}"
+    type="button"
+    onclick="toggleFavorite('${item.id}')"
+>
+    ${item.favorite ? "♥" : "♡"}
+</button>
 
             </div>
 
@@ -1457,3 +1456,4 @@ function renderEverything() {
 renderEverything();
 
 openScreen("home");
+window.toggleFavorite = toggleFavorite;
