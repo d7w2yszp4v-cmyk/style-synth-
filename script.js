@@ -546,7 +546,9 @@ function attachCardActions() {
 // ======================================================
 
 function toggleFavorite(id) {
-  const item = wardrobe.find(item => String(item.id) === String(id));
+  const item = wardrobe.find(
+    item => String(item.id) === String(id)
+  );
 
   if (!item) return;
 
@@ -561,7 +563,6 @@ function toggleFavorite(id) {
     showToast("💔 Removed from Liked");
   }
 }
-
 
 // ======================================================
 // DELETE
