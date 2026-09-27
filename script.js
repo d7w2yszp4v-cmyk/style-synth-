@@ -546,23 +546,37 @@ function attachCardActions() {
 // ======================================================
 
 function toggleFavorite(id) {
-  const item = wardrobe.find(
-    item => String(item.id) === String(id)
-  );
 
-  if (!item) return;
+    const item =
+        wardrobe.find(
+            item => String(item.id) === String(id)
+        );
 
-  item.favorite = item.favorite !== true;
+    if (!item) return;
 
-  saveWardrobe();
 
-  renderEverything();
+    item.favorite =
+        item.favorite !== true;
 
-  if (item.favorite === true) {
-    showToast("❤️ Added to Liked");
-  } else {
-    showToast("💔 Removed from Liked");
-  }
+
+    // YOUR APP'S EXISTING SAVE FUNCTION
+    saveData();
+
+
+    // Refresh wardrobe, recent, favorites and counters
+    renderEverything();
+
+
+    // YOUR APP'S EXISTING TOAST FUNCTION
+    if (item.favorite === true) {
+
+        toast("❤️ Added to Liked");
+
+    } else {
+
+        toast("💔 Removed from Liked");
+
+    }
 }
 
 // ======================================================
