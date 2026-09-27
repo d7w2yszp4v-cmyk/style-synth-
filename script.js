@@ -430,10 +430,11 @@ function createCard(item) {
                 }
 
 
-                <button
+   <button
     class="favorite ${item.favorite ? "active" : ""}"
     type="button"
-    onclick="toggleFavorite('${item.id}')"
+    data-id="${item.id}"
+    onclick="event.preventDefault(); event.stopPropagation(); toggleFavorite('${item.id}'); return false;"
 >
     ${item.favorite ? "♥" : "♡"}
 </button>
