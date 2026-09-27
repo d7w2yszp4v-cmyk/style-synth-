@@ -552,16 +552,12 @@ function toggleFavorite(id) {
 
   if (!item) return;
 
-  // Toggle favorite
   item.favorite = item.favorite !== true;
 
-  // Save immediately
   saveWardrobe();
 
-  // Update the page
   renderEverything();
 
-  // Message
   if (item.favorite === true) {
     showToast("❤️ Added to Liked");
   } else {
